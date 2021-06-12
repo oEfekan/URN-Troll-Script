@@ -1,0 +1,94 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   print("Welcome",game.Players.LocalPlayer,"Enjoy the script!")
+print(game.Players.LocalPlayer,"Is the boss!")
+local uis = game:GetService("UserInputService")
+
+uis.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.J then
+    print(game.Players.LocalPlayer,"Said: Doors are MINE! AND MINE FOREVER!")
+    
+local args = {
+    [1] = "Left Vent Button",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+
+local args = {
+    [1] = "Right Vent Button",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+
+local args = {
+    [1] = "Left Door Button",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+
+local args = {
+    [1] = "Right Door Button",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+end
+end)
+--
+local uis = game:GetService("UserInputService")
+
+uis.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.K then
+
+    print(game.Players.LocalPlayer,"Said: Doors are MINE! AND MINE FOREVER!")
+local args = {
+    [1] = "Left Vent Button",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+
+local args = {
+    [1] = "Right Vent Button",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+local args = {
+    [1] = "Left Door Button",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+
+local args = {
+    [1] = "Right Door Button",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").CalltoDoor:FireServer(unpack(args))
+end
+end)
+--
+
+
+uis.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.F then
+        game:GetService("ReplicatedStorage").BonBonJumpscare:FireServer()
+        print("BONBON! GO GET EM!")
+    end
+end)
+
+--
+uis.InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.L then
+        print("DIE! NIGHT GUARD!")
+        local args = {
+            [1] = "Death",
+            [2] = true
+        }
+
+        game:GetService("ReplicatedStorage").ChangeGameValue:FireServer(unpack(args))
+    end
+end)
